@@ -4,7 +4,7 @@ import replicate
 
 class MusicGen:
     def __init__(self):
-        self.model = "meta/musicgen:671ac645ce5e552cc63a54a2bbff63fcf798043055d2dac5fc9e36a837eedcfb"
+        self.model = "meta/musicgen:latest"
 
     def generate_music(self, duration, description=None, audio_file_path=None):
         input_data = {
