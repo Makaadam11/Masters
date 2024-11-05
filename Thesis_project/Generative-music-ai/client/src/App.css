@@ -1,0 +1,116 @@
+.App {
+	text-align: center;
+}
+
+.App-header {
+	background-color: grey-background-colo;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-size: calc(20px + 2vmin);
+	color: secondary-text-on-secondary-color;
+}
+
+.body {
+	margin: var(--spacing-medium);
+	padding: var(--spacing-medium);
+	background-color: var(--background-color);
+	color: var(--text-color);
+	border-radius: var(--border-radius);
+	box-shadow: var(--box-shadow);
+}
+
+.btn:hover {
+	transform: scale(1.1);
+	transition: transform 0.3s;
+}
+
+.sound-wave {
+	border: 15px solid #000 !important;
+	border-radius: 10px !important;
+	width: 600px;
+	height: 120px !important;
+	margin-top: -1% !important;
+	margin-bottom: 30px !important;
+	position: relative !important;
+	overflow: hidden !important;
+	transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+	box-shadow: 5px 5px 0 #000, 10px 10px 0 #4682b4 !important;
+}
+
+.container {
+	--bg: radial-gradient(circle at center, #000 5%, #0000 6%);
+	--size: 3rem;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-image: var(--bg), var(--bg);
+	background-position: 0 0, calc(var(--size) / 2) calc(var(--size) / 2);
+	background-size: var(--size) var(--size);
+	z-index: -1; /* Ensure it's behind other content */
+}
+
+.App > div:not(.container),
+.App > nav,
+.App > header,
+.App > footer {
+	position: relative;
+	z-index: 1; /* Ensures content is above the .container */
+}
+
+.card {
+	position: relative;
+	width: 100%;
+	height: 80px;
+	background: #74d3cb; /* Calming teal */
+	color: #ffffff; /* Dark Gray for text */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 25px;
+	font-weight: bold;
+	border-radius: 0 0 15px 15px;
+	cursor: pointer;
+}
+
+.card::before,
+.card::after {
+	position: absolute;
+	content: "";
+	width: 20%;
+	height: 20%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 25px;
+	font-weight: bold;
+	background-color: #44b9c9; /* Light turquoise */
+	transition: all 0.5s;
+}
+.card::before {
+	top: 0;
+	right: 0;
+	border-radius: 0 0px 0 100%;
+}
+
+.card::after {
+	bottom: 0;
+	left: 0;
+	border-radius: 0 100% 0 15px;
+}
+
+.card:hover::before,
+.card:hover:after {
+	width: 100%;
+	height: 100%;
+	border-radius: 15px;
+	transition: all 0.5s;
+}
+
+.card:hover:after {
+	content: "CREATE YOUR SONGS";
+}

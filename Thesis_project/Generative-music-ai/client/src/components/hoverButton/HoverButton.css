@@ -1,0 +1,72 @@
+.c-button {
+  color: #000;
+  font-weight: bold;
+  font-size: 25px;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  justify-content: center;
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  z-index: 1;
+}
+
+.c-button--gooey {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border: 15px solid;
+  border-radius: 0;
+  position: relative;
+  transition: all 700ms ease;
+  display: flex; /* Add this line */
+  justify-content: center; /* Add this line */
+  align-items: center; /* Add this line */
+  text-align: center; /* Ensures text is centered if flex doesn't apply to all child elements */
+}
+
+.c-button--gooey .c-button__blobs {
+  height: 100%;
+  filter: url(#goo);
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: -3px;
+  right: -1px;
+  z-index: -1;
+  /* box-shadow: 0px 20px 15px rgba(0, 0, 0, 0.3);  */
+  /* Adds shadow at the bottom */
+}
+
+.c-button--gooey .c-button__blobs div {
+  width: 34%;
+  height: 100%;
+  border-radius: 100%;
+  position: absolute;
+  transform: scale(1.4) translateY(125%) translateZ(0);
+  transition: all 700ms ease;
+}
+
+.c-button--gooey .c-button__blobs div:nth-child(1) {
+  left: -5%;
+}
+
+.c-button--gooey .c-button__blobs div:nth-child(2) {
+  left: 30%;
+  transition-delay: 60ms;
+}
+
+.c-button--gooey .c-button__blobs div:nth-child(3) {
+  left: 66%;
+  transition-delay: 25ms;
+}
+
+.c-button--gooey:hover {
+  color: #fff !important;
+}
+
+.c-button--gooey:hover .c-button__blobs div {
+  transform: scale(1.4) translateY(0) translateZ(0);
+}

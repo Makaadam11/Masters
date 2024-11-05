@@ -1,0 +1,6 @@
+/env
+/secrets
+/env310
+/envUnix
+/routes/__pycache__
+/models/__pycache__
