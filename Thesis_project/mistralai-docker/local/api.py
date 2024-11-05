@@ -3,7 +3,7 @@ from langchain_core.prompts import PromptTemplate
 from langchain import PromptTemplate, HuggingFaceHub, LLMChain
 import os
 
-os.environ['HUGGINGFACEHUB_API_TOKEN'] = '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'
+os.environ['HUGGINGFACEHUB_API_TOKEN'] = 'YOUR_API_TOKEN'
 
 app = Flask(__name__)
 
